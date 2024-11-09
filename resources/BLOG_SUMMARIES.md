@@ -8,6 +8,8 @@
   - **AI/ML is reshaping the industry**: Engineers with AI/ML skills are at the forefront of innovation in fields like healthcare, finance, and autonomous systems.
   - **You don’t have to be an expert**: Even a basic understanding of AI/ML concepts can enhance job prospects and improve collaboration with data scientists.
   - **Continuous learning is essential**: With numerous accessible resources, engineers can gradually build their AI/ML skills to stay competitive and future-proof their careers.
+
+- https://medium.com/@ahmedmishal636/the-great-divide-are-software-engineers-without-ai-ml-skills-being-left-behind-eeab9e5ff738
   
 ---
 
@@ -20,4 +22,6 @@
   - **Multi-cloud support**: Pulumi works with major cloud providers like AWS, Azure, and Google Cloud, enabling centralized infrastructure management.
   - **CI/CD integration**: The platform integrates seamlessly with CI/CD tools like GitHub Actions, Jenkins, and GitLab, allowing for efficient deployment and infrastructure updates.
   - **Collaboration and Security**: Pulumi’s version control and secure management of sensitive data streamline team collaboration and enhance security.
+
+  - https://medium.com/@ahmedmishal636/pulumi-making-infrastructure-as-code-easier-for-devops-teams-1747a58ac3d3
 
