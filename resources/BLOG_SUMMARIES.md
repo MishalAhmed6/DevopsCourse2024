@@ -23,5 +23,5 @@
   - **CI/CD integration**: The platform integrates seamlessly with CI/CD tools like GitHub Actions, Jenkins, and GitLab, allowing for efficient deployment and infrastructure updates.
   - **Collaboration and Security**: Pulumi’s version control and secure management of sensitive data streamline team collaboration and enhance security.
 
-  - https://medium.com/@ahmedmishal636/pulumi-making-infrastructure-as-code-easier-for-devops-teams-1747a58ac3d3
+- https://medium.com/@ahmedmishal636/pulumi-making-infrastructure-as-code-easier-for-devops-teams-1747a58ac3d3
 
