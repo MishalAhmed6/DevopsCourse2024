@@ -1,4 +1,10 @@
+## I choose the below repo and applied Devops concepts to it.
+
+
+
 # Getting Started with Create React App
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
