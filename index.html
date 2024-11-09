@@ -1,101 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your Name - CV</title>
-    <!-- Adding some styles to make it look clean -->
+    <title>Naomi Weatherford - Frontend Web Designer</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <style>
+        /* SCSS Converted to CSS */
+        * {
+            outline: none;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        html,
         body {
-            font-family: Arial, sans-serif;
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
-            color: #333;
+            padding: 0;
+            transition: 0.5s;
+            background: #ffffff;
+            cursor: default;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
         }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #4CAF50;
-            color: white;
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            transition-duration: 0.3s;
         }
-        section {
-            margin-top: 20px;
-        }
-        h2 {
-            color: #333;
-        }
+
         ul {
             list-style-type: none;
-            padding-left: 0;
+            padding: 0;
         }
-        li {
-            padding: 5px;
+
+        h2 {}
+
+        h3 {
+            color: #ffb300;
+            margin: 10px 0;
+            text-transform: lowercase;
+            font-size: 1.25em;
         }
-        .cv-section {
-            margin-bottom: 30px;
+
+        .resume {
+            width: 960px;
+            background: #1a237e;
+            color: #ffffff;
+            margin: 20px auto;
+            box-shadow: 10px 10px #0e1442;
+            position: relative;
+            display: flex;
         }
-        footer {
+
+        .resume .base,
+        .resume .func {
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .resume .base > div,
+        .resume .func > div {
+            padding-bottom: 10px;
+        }
+
+        .resume .base > div:last-of-type,
+        .resume .func > div:last-of-type {
+            padding-bottom: 0;
+        }
+
+        .resume .base {
+            width: 30%;
+            padding: 30px 15px;
+            background: #283593;
+            color: #ffffff;
+        }
+
+        .resume .base .profile {
+            background: #ffb300;
+            padding: 30px 15px 40px 15px;
+            margin: -30px -15px 45px -15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .resume .base .profile::after {
+            content: "";
+            position: absolute;
+            background: #303f9f;
+            width: 100%;
+            height: 30px;
+            bottom: -15px;
+            left: 0;
+            transform: skewY(-5deg);
+            z-index: -1;
+        }
+
+        .resume .base .profile .photo img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .resume .base .profile .photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .resume .base .profile .fa-rocket {
+            font-size: 100px;
             text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
+            margin: auto;
+            color: #283593;
         }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
+
+        .resume .base .profile .info {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .resume .base .profile .info .name {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 1.75em;
+            text-transform: lowercase;
+            color: #1a237e;
+        }
+
+        .resume .base .profile .info .job {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 1.5em;
+            text-transform: lowercase;
+            color: #283593;
+        }
+
+        .resume .base .contact div {
+            line-height: 24px;
+        }
+
+        .resume .base .contact div a:hover {
+            color: #fdd835;
+        }
+
+        .resume .base .contact div a:hover span::after {
+            width: 100%;
+        }
+
+        .resume .base .contact div:hover i {
+            color: #fdd835;
+        }
+
+        .resume .base .contact div i {
+            color: #ffb300;
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+            margin-right: 15px;
+            transition-duration: 0.3s;
+        }
+
+        .resume .base .contact div span {
+            position: relative;
+        }
+
+        .resume .base .contact div span::after {
+            content: "";
+            position: absolute;
+            background: #fdd835;
+            height: 1px;
+            width: 0;
+            bottom: 0;
+            left: 0;
+            transition-duration: 0.3s;
+        }
+
+        .resume .base .follow .box a {
+            color: #ffffff;
+            margin: 0 5px;
+            font-size: 30px;
+            transition-duration: 0.3s;
+        }
+
+        .resume .base .follow .box a:hover {
+            color: #fdd835;
+        }
+
+        .resume .func {
+            width: 70%;
+            padding: 30px 15px;
+            background: #3949ab;
+            color: #ffffff;
+        }
+
+        .resume .func .work ul,
+        .resume .func .edu ul,
+        .resume .func .skills-prog ul,
+        .resume .func .skills-soft ul {
+            padding: 0;
+        }
+
+        .resume .func .work ul li,
+        .resume .func .edu ul li,
+        .resume .func .skills-prog ul li,
+        .resume .func .skills-soft ul li {
+            margin-bottom: 10px;
+        }
+
+        .resume .func .work ul li small,
+        .resume .func .edu ul li small {
+            display: block;
+            font-size: 0.85em;
+            color: #9fa8da;
+        }
+
+        .resume .func .skills-prog ul li {
+            margin-bottom: 15px;
+        }
+
+        .resume .func .skills-prog .skills-bar {
+            width: 100%;
+            background: #5c6bc0;
+            height: 5px;
+            border-radius: 5px;
+        }
+
+        .resume .func .skills-prog .bar {
+            height: 100%;
+            background: #ffb300;
+        }
+
+        .resume .func .skills-soft ul li {
+            margin-bottom: 20px;
+        }
+
+        .resume .func .skills-soft svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            position: relative;
+        }
+
+        .resume .func .skills-soft svg .cbar {
+            position: absolute;
+            stroke-dasharray: 283;
+            stroke-dashoffset: 0;
+            animation: progress 1.5s ease-out forwards;
+        }
+
+        .resume .func .interests-items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .resume .func .interests-items .art,
+        .resume .func .interests-items .movies,
+        .resume .func .interests-items .music,
+        .resume .func .interests-items .games {
+            width: 30%;
+            margin: 5px 0;
+        }
+
+        .resume .func .interests-items i {
+            font-size: 30px;
+            color: #ffb300;
+            margin-right: 10px;
+        }
+
+        .resume .func .interests-items span {
+            color: #ffffff;
+            font-size: 1.25em;
+        }
+
+        @keyframes progress {
+            from {
+                stroke-dashoffset: 283;
+            }
+
+            to {
+                stroke-dashoffset: 0;
+            }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p><strong>Email:</strong> youremail@example.com</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-    </header>
 
-    <section class="cv-section">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Role 1</strong> - Company 1 (Jan 2020 - Present)
+    <div class="resume">
+        <div class="base">
+            <div class="profile">
+                <div class="photo">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="info">
+                    <h1 class="name">Naomi Weatherford</h1>
+                    <h2 class="job">Frontend Web Designer</h2>
+                </div>
+            </div>
+            <div class="about">
+                <h3>About Me</h3>
+                I'm a web designer for Fiserv, specializing in web design, graphic design, and UX. Experienced with the
+                Adobe Creative Suite, responsive design, social media management, and prototyping.
+            </div>
+            <div class="contact">
+                <h3>Contact Me</h3>
+                <div class="call"><a href="tel:123-456-7890"><i class="fas fa-phone"></i><span>123-456-7890</span></a>
+                </div>
+                <div class="address"><a href="https://goo.gl/maps/fiTBGT6Vnhy"><i class="fas fa-map-marker"></i><span>Provo,
+                        Utah</span></a></div>
+                <div class="email"><a href="mailto:astronaomical@gmail.com"><i class="fas fa-envelope"></i><span>astronaomical</span></a></div>
+                <div class="website"><a href="https://astronoweb.com"><i class="fas fa-globe"></i><span>astronoweb.com</span></a></div>
+            </div>
+            <div class="follow">
+                <h3>Follow Me</h3>
+                <div class="box">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="func">
+            <div class="work">
+                <h3>Work Experience</h3>
                 <ul>
-                    <li>Responsibility 1</li>
-                    <li>Responsibility 2</li>
+                    <li>
+                        <h4>Frontend Web Designer at Fiserv</h4>
+                        <small>March 2020 - Present</small>
+                    </li>
+                    <li>
+                        <h4>Web Designer at XYZ</h4>
+                        <small>January 2018 - February 2020</small>
+                    </li>
                 </ul>
-            </li>
-            <li><strong>Role 2</strong> - Company 2 (May 2018 - Dec 2019)
+            </div>
+
+            <div class="edu">
+                <h3>Education</h3>
                 <ul>
-                    <li>Responsibility 1</li>
-                    <li>Responsibility 2</li>
+                    <li>
+                        <h4>Bachelor of Fine Arts in Web Design</h4>
+                        <small>University of Utah, Graduated 2017</small>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
+            </div>
 
-    <section class="cv-section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: JavaScript, Python, C#</li>
-            <li>Frameworks: React, Node.js, Express</li>
-            <li>Tools: Docker, Kubernetes, Git, CI/CD</li>
-        </ul>
-    </section>
+            <div class="skills-prog">
+                <h3>Programming Skills</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
 
-    <section class="cv-section">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Bachelor's in Computer Science</strong> - University XYZ (2014 - 2018)</li>
-        </ul>
-    </section>
+            <div class="skills-soft">
+                <h3>Software Skills</h3>
+                <ul>
+                    <li>
+                        <svg>
+                            <circle cx="50%" cy="50%" r="45%" class="cbar" />
+                        </svg>
+                        <span>Adobe Photoshop</span>
+                    </li>
+                    <li>
+                        <svg>
+                            <circle cx="50%" cy="50%" r="45%" class="cbar" />
+                        </svg>
+                        <span>Sketch</span>
+                    </li>
+                </ul>
+            </div>
 
-    <section class="cv-section">
-        <h2>Download My Resume</h2>
-        <p>If you'd like a more detailed version of my CV, you can download it below:</p>
-        <p><a href="https://github.com/yourusername/your-repository/raw/main/resume.pdf" target="_blank">Download Resume (PDF)</a></p>
-    </section>
+            <div class="interests">
+                <h3>Interests</h3>
+                <div class="interests-items">
+                    <div class="art"><i class="fas fa-palette"></i><span>Art</span></div>
+                    <div class="movies"><i class="fas fa-film"></i><span>Movies</span></div>
+                    <div class="music"><i class="fas fa-music"></i><span>Music</span></div>
+                    <div class="games"><i class="fas fa-gamepad"></i><span>Games</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <p>Created with ❤️ by Your Name</p>
-    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
+
 </html>
